@@ -10,12 +10,16 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center mt-2 mb-4">Jovian Careers</h1>
+      <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
       <img class="img-fluid" src="https://jovian-careers-website.eliasdewa14.repl.co/static/banner.jpg" alt="">
       <h2 class="text-center mt-2 mb-4">About Jovian</h2>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed tempus urna et pharetra pharetra massa massa. Tellus id interdum velit laoreet id. Lacus sed turpis tincidunt id. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Nisi lacus sed viverra tellus in hac habitasse platea. Donec enim diam vulputate ut pharetra. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Feugiat vivamus at augue eget arcu dictum varius duis. A diam maecenas sed enim ut sem viverra aliquet. Nulla pharetra diam sit amet. Egestas egestas fringilla phasellus faucibus scelerisque.</p>
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
-      <p>TODO - Show the jobs here</p>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitems.html' %}
+        {% endfor %}
+      </div>
       <div class="text-center">
         <button class="btn btn-primary btn-lg">Contact Us</button>
         <p class="mt-4">Copyright 2023, Elias</p>
