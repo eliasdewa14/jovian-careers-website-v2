@@ -1,2 +1,4 @@
 FLASK
 gunicorn
+sqlalchemy
+pymysql
