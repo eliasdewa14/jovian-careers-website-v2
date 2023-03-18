@@ -22,7 +22,14 @@
     <img id="banner" src="https://jovian-careers-website.eliasdewa14.repl.co/static/banner.jpg" alt="">
     <div class="container">
       <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed tempus urna et pharetra pharetra massa massa. Tellus id interdum velit laoreet id. Lacus sed turpis tincidunt id. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Nisi lacus sed viverra tellus in hac habitasse platea. Donec enim diam vulputate ut pharetra. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Feugiat vivamus at augue eget arcu dictum varius duis. A diam maecenas sed enim ut sem viverra aliquet. Nulla pharetra diam sit amet. Egestas egestas fringilla phasellus faucibus scelerisque.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed tempus urna et pharetra pharetra massa massa. Tellus id interdum velit laoreet id. Lacus sed turpis tincidunt id. Volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris. Nisi lacus sed viverra tellus in hac habitasse platea. Donec enim diam vulputate ut pharetra. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor. Feugiat vivamus at augue eget arcu dictum varius duis. A diam maecenas sed enim ut sem viverra aliquet. Nulla pharetra diam sit amet. Egestas egestas fringilla phasellus faucibus scelerisque.</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <img src="/static/people_working.jpg" style="height: 320px; border-radius: 4px;">
+        </div>
+      <div>
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
       <div>
         {% for job in jobs %}
@@ -30,7 +37,7 @@
         {% endfor %}
       </div>
       <div class="text-center">
-        <button class="btn btn-primary btn-lg">Contact Us</button>
+        <a href="mailto:eliasdewa6@gmail.com?subject=Questions%20about%20Job%20Openings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3CEnter%20your%20questions%20here%3E%0D%0A%0D%0A" class="btn btn-primary btn-lg">Contact Us</a>
       </div>
      </div>
     {% include 'footer.html' %}
