@@ -18,15 +18,17 @@ def load_jobs_from_db():
       jobs_list.append(row._asdict())
   
     return jobs_list
-"""
-with engine.connect() as conn:
-  result = conn.execute(text("SELECT * FROM jobs"))
-  
-  print("type(result):", type(result))
-  result_all = result.all()
-  print("type(result.all()):", type(result_all))
-  first_result = result_all[0]
-  print("type(first_result:", type(first_result))
-"""
+
+def load_single_job(job_id):
+  with engine.connect() as conn:
+    result = conn.execute(
+      text("SELECT * FROM jobs WHERE id = :val"),
+      {'val': job_id})
+    
+    rows = result.all()
+    if len(rows) == 0:
+      return None
+    else:
+      return rows[0]._asdict()
   
   
